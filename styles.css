@@ -1,4 +1,60 @@
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: red;
+html {
+    font-family: sans-serif;
+}
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-inline-start: 0; 
+}
+
+.pokedex > .card {
+    flex-grow: 1;
+    flex-basis: calc( ( 30rem - 100% ) * 999 );  
+}
+
+.pokedex > :nth-last-child(n+ 4),
+.pokedex > :nth-last-child(n+ 4) ~ * {
+  flex-basis: 100%;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    list-style-type: none;
+    padding: 16px;
+    transition: 0.3s;
+    width: 33vw;
+}
+
+.card img {
+    border: 3px outset lightgray;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(101%);
+}
+
+/* Add some padding inside the card container */
+.container {
+    p_adding: 2px 16px;
+}
+
+.fire {
+    background-color: red;
+    color: white;
+}
+
+.lightning {
+    background-color: yellow;
+}
+
+.psychic {
+    background-color: blueviolet;
+    color: white;
 }
